@@ -1,0 +1,235 @@
+###############################################################################
+#
+# IAR ELF Linker V7.70.1.11437/W32 for ARM                10/Aug/2019  13:34:14
+# Copyright 2007-2016 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\ti\tm4c129\examples\boards\ek-tm4c1294xl\blinky\ewarm\Exe\blinky.out
+#    Map file     =  
+#        C:\ti\tm4c129\examples\boards\ek-tm4c1294xl\blinky\ewarm\List\blinky.map
+#    Command line =  
+#        C:\ti\tm4c129\examples\boards\ek-tm4c1294xl\blinky\ewarm\Obj\blinky.o
+#        C:\ti\tm4c129\driverlib\ewarm\Exe\driverlib.a
+#        C:\ti\tm4c129\examples\boards\ek-tm4c1294xl\blinky\ewarm\Obj\startup_ewarm.o
+#        --redirect _Printf=_PrintfTiny --redirect _Scanf=_ScanfSmall -o
+#        C:\ti\tm4c129\examples\boards\ek-tm4c1294xl\blinky\ewarm\Exe\blinky.out
+#        --map
+#        C:\ti\tm4c129\examples\boards\ek-tm4c1294xl\blinky\ewarm\List\blinky.map
+#        --config C:\ti\tm4c129\examples\boards\ek-tm4c1294xl\blinky\blinky.icf
+#        --semihosting --entry __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at start of [0x00000000-0x000fffff] { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x000fffff] { ro };
+"P2":  place in [from 0x20000000 to 0x2003ffff] { rw, block HEAP };
+do not initialize { section .noinit };
+
+  Section          Kind        Address   Size  Object
+  -------          ----        -------   ----  ------
+"A0":                                   0x200
+  .intvec          const    0x00000000  0x200  startup_ewarm.o [1]
+                          - 0x00000200  0x200
+
+"P1":                                   0xe4c
+  .text            ro code  0x00000200  0x650  sysctl.o [4]
+  .text            ro code  0x00000850  0x254  blinky.o [1]
+  .text            ro code  0x00000aa4   0x36  strlen.o [6]
+  .text            ro code  0x00000ada    0xa  xsprout.o [3]
+  .text            ro code  0x00000ae4    0xa  uart.o [4]
+  .text            ro code  0x00000af0  0x24c  gpio.o [4]
+  .text            ro code  0x00000d3c   0x60  i2c.o [4]
+  .text            ro code  0x00000d9c   0x34  sprintf.o [3]
+  .text            ro code  0x00000dd0   0x16  interrupt.o [4]
+  .text            ro code  0x00000de6  0x14e  xprintftiny.o [3]
+  .text            ro code  0x00000f34   0x10  cpu.o [4]
+  .text            ro code  0x00000f44   0x40  zero_init3.o [6]
+  .text            ro code  0x00000f84   0x28  data_init.o [6]
+  .text            ro code  0x00000fac   0x22  fpinit_M.o [5]
+  .iar.init_table  const    0x00000fd0   0x10  - Linker created -
+  .text            ro code  0x00000fe0   0x1a  startup_ewarm.o [1]
+  .text            ro code  0x00000ffa    0xc  cstartup_M.o [6]
+  .text            ro code  0x00001008   0x1a  cmain.o [6]
+  .text            ro code  0x00001022    0x4  low_level_init.o [3]
+  .text            ro code  0x00001026    0x4  exit.o [3]
+  .text            ro code  0x0000102c    0xa  cexit.o [6]
+  .text            ro code  0x00001038   0x14  exit.o [7]
+  .rodata          const    0x0000104c    0x0  zero_init3.o [6]
+                          - 0x0000104c  0xe4c
+
+"P2", part 1 of 2:                       0x28
+  .bss             zero     0x20000000   0x24  blinky.o [1]
+  .bss             zero     0x20000024    0x4  blinky.o [1]
+                          - 0x20000028   0x28
+
+"P2", part 2 of 2:                      0x200
+  .noinit          uninit   0x20000028  0x200  startup_ewarm.o [1]
+                          - 0x20000228  0x200
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x28:
+          0x20000000  0x28
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+C:\ti\tm4c129\examples\boards\ek-tm4c1294xl\blinky\ewarm\Obj: [1]
+    blinky.o              596                40
+    startup_ewarm.o        26      512      512
+    -------------------------------------------
+    Total:                622      512      552
+
+command line: [2]
+    -------------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    exit.o                  4
+    low_level_init.o        4
+    sprintf.o              52
+    xprintftiny.o         334
+    xsprout.o              10
+    -------------------------------------------
+    Total:                404
+
+driverlib.a: [4]
+    cpu.o                  16
+    gpio.o                588
+    i2c.o                  96
+    interrupt.o            22
+    sysctl.o            1 616
+    uart.o                 10
+    -------------------------------------------
+    Total:              2 348
+
+m7M_tls.a: [5]
+    fpinit_M.o             34
+    -------------------------------------------
+    Total:                 34
+
+rt7M_tl.a: [6]
+    cexit.o                10
+    cmain.o                26
+    cstartup_M.o           12
+    data_init.o            40
+    strlen.o               54
+    zero_init3.o           64
+    -------------------------------------------
+    Total:                206
+
+shb_l.a: [7]
+    exit.o                 20
+    -------------------------------------------
+    Total:                 20
+
+    Gaps                    8        2
+    Linker created                  16
+-----------------------------------------------
+    Grand Total:        3 642      530      552
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.iar.init_table$$Base   0x00000fd0          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x00000fe0          --   Gb  - Linker created -
+?main                   0x00001009         Code  Gb  cmain.o [6]
+CPUcpsid                0x00000f35    0x8  Code  Gb  cpu.o [4]
+CPUcpsie                0x00000f3d    0x8  Code  Gb  cpu.o [4]
+FaultISR                0x00000ff7    0x2  Code  Lc  startup_ewarm.o [1]
+GPIODirModeSet          0x00000af1   0x28  Code  Gb  gpio.o [4]
+GPIOPadConfigSet        0x00000b19   0xfe  Code  Gb  gpio.o [4]
+GPIOPinConfigure        0x00000c6d   0x38  Code  Gb  gpio.o [4]
+GPIOPinTypeGPIOOutput   0x00000c21    0xa  Code  Gb  gpio.o [4]
+GPIOPinTypeI2C          0x00000c3d   0x14  Code  Gb  gpio.o [4]
+GPIOPinTypeI2CSCL       0x00000c51   0x14  Code  Gb  gpio.o [4]
+GPIOPinWrite            0x00000c17    0x6  Code  Gb  gpio.o [4]
+I2CMasterEnable         0x00000d7f    0xc  Code  Gb  i2c.o [4]
+I2CMasterInitExpClk     0x00000d3d   0x42  Code  Gb  i2c.o [4]
+InitI2C0                0x00000873   0x5a  Code  Gb  blinky.o [1]
+IntDefaultHandler       0x00000ff9    0x2  Code  Lc  startup_ewarm.o [1]
+IntMasterDisable        0x00000dd9    0x6  Code  Gb  interrupt.o [4]
+IntMasterEnable         0x00000dd1    0x8  Code  Gb  interrupt.o [4]
+NmiSR                   0x00000ff5    0x2  Code  Lc  startup_ewarm.o [1]
+Region$$Table$$Base     0x00000fd0          --   Gb  - Linker created -
+Region$$Table$$Limit    0x00000fe0          --   Gb  - Linker created -
+ResetISR                0x00000fe1    0xe  Code  Gb  startup_ewarm.o [1]
+SysCtlClockFreqSet      0x0000029d  0x204  Code  Gb  sysctl.o [4]
+SysCtlClockGet          0x000004a1  0x110  Code  Gb  sysctl.o [4]
+SysCtlPeripheralEnable  0x00000281    0x8  Code  Gb  sysctl.o [4]
+SysCtlPeripheralReady   0x00000221    0x8  Code  Gb  sysctl.o [4]
+SysCtlPeripheralReset   0x00000241   0x40  Code  Gb  sysctl.o [4]
+UART7IntHandler         0x000008cd   0x50  Code  Gb  blinky.o [1]
+UARTCharPut             0x00000ae5    0xa  Code  Gb  uart.o [4]
+UARTSend                0x00000851   0x22  Code  Gb  blinky.o [1]
+_PrintfTiny             0x00000dff  0x136  Code  Gb  xprintftiny.o [3]
+_SProut                 0x00000adb    0xa  Code  Gb  xsprout.o [3]
+_SysCtlMemTimingGet     0x00000201   0x20  Code  Lc  sysctl.o [4]
+__cmain                 0x00001009         Code  Gb  cmain.o [6]
+__exit                  0x00001039   0x14  Code  Gb  exit.o [7]
+__iar_data_init3        0x00000f85   0x28  Code  Gb  data_init.o [6]
+__iar_init_vfp          0x00000fad         Code  Gb  fpinit_M.o [5]
+__iar_program_start     0x00000ffb         Code  Gb  cstartup_M.o [6]
+__iar_zero_init3        0x00000f45   0x40  Code  Gb  zero_init3.o [6]
+__low_level_init        0x00001023    0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x00000000  0x200  Data  Gb  startup_ewarm.o [1]
+_call_main              0x00001015         Code  Gb  cmain.o [6]
+_exit                   0x0000102d         Code  Gb  cexit.o [6]
+_main                   0x0000101f         Code  Gb  cmain.o [6]
+buf                     0x20000004   0x20  Data  Gb  blinky.o [1]
+exit                    0x00001027    0x4  Code  Gb  exit.o [3]
+g_pppui32XTALtoVCO      0x00000668  0x1b0  Data  Lc  sysctl.o [4]
+g_pui32GPIOBaseAddrs    0x00000cac   0x90  Data  Lc  gpio.o [4]
+g_pui32VCOFrequencies   0x00000848    0x8  Data  Lc  sysctl.o [4]
+g_pui32Xtals            0x000005fc   0x6c  Data  Lc  sysctl.o [4]
+g_sXTALtoMEMTIM         0x00000818   0x30  Data  Lc  sysctl.o [4]
+g_ui32SysClock          0x20000024    0x4  Data  Gb  blinky.o [1]
+main                    0x0000091d  0x104  Code  Gb  blinky.o [1]
+out                     0x00000de7   0x18  Code  Lc  xprintftiny.o [3]
+pui32Stack              0x20000028  0x200  Data  Lc  startup_ewarm.o [1]
+receivedChar            0x20000000    0x1  Data  Gb  blinky.o [1]
+sprintf                 0x00000d9d   0x34  Code  Gb  sprintf.o [3]
+strlen                  0x00000aa5         Code  Gb  strlen.o [6]
+
+
+[1] = C:\ti\tm4c129\examples\boards\ek-tm4c1294xl\blinky\ewarm\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = driverlib.a
+[5] = m7M_tls.a
+[6] = rt7M_tl.a
+[7] = shb_l.a
+
+  3 642 bytes of readonly  code memory
+    530 bytes of readonly  data memory
+    552 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,204 @@
+###############################################################################
+#
+# IAR ELF Linker V7.70.1.11437/W32 for ARM                14/Apr/2019  18:02:58
+# Copyright 2007-2016 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\ti\tm4c129\examples\boards\ek-tm4c1294xl\uart_echo\ewarm\Exe\uart_echo.out
+#    Map file     =  
+#        C:\ti\tm4c129\examples\boards\ek-tm4c1294xl\uart_echo\ewarm\List\uart_echo.map
+#    Command line =  
+#        C:\ti\tm4c129\driverlib\ewarm\Exe\driverlib.a
+#        C:\ti\tm4c129\examples\boards\ek-tm4c1294xl\uart_echo\ewarm\Obj\startup_ewarm.o
+#        C:\ti\tm4c129\examples\boards\ek-tm4c1294xl\uart_echo\ewarm\Obj\uart_echo.o
+#        --redirect _Printf=_PrintfTiny --redirect _Scanf=_ScanfSmall -o
+#        C:\ti\tm4c129\examples\boards\ek-tm4c1294xl\uart_echo\ewarm\Exe\uart_echo.out
+#        --map
+#        C:\ti\tm4c129\examples\boards\ek-tm4c1294xl\uart_echo\ewarm\List\uart_echo.map
+#        --config
+#        C:\ti\tm4c129\examples\boards\ek-tm4c1294xl\uart_echo\uart_echo.icf
+#        --semihosting --entry __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at start of [0x00000000-0x000fffff] { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x000fffff] { ro };
+"P2":  place in [from 0x20000000 to 0x2003ffff] { rw, block HEAP };
+do not initialize { section .noinit };
+
+  Section          Kind        Address   Size  Object
+  -------          ----        -------   ----  ------
+"A0":                                   0x200
+  .intvec          const    0x00000000  0x200  startup_ewarm.o [1]
+                          - 0x00000200  0x200
+
+"P1":                                   0x818
+  .text            ro code  0x00000200  0x4a4  sysctl.o [4]
+  .text            ro code  0x000006a4  0x174  uart_echo.o [1]
+  .text            ro code  0x00000818   0xd4  gpio.o [4]
+  .text            ro code  0x000008ec   0x10  interrupt.o [4]
+  .text            ro code  0x000008fc    0xa  uart.o [4]
+  .text            ro code  0x00000908    0x8  cpu.o [4]
+  .text            ro code  0x00000910   0x40  zero_init3.o [6]
+  .text            ro code  0x00000950   0x28  data_init.o [6]
+  .text            ro code  0x00000978   0x22  fpinit_M.o [5]
+  .iar.init_table  const    0x0000099c   0x10  - Linker created -
+  .text            ro code  0x000009ac   0x1a  startup_ewarm.o [1]
+  .text            ro code  0x000009c6    0xc  cstartup_M.o [6]
+  .text            ro code  0x000009d4   0x1a  cmain.o [6]
+  .text            ro code  0x000009ee    0x4  low_level_init.o [3]
+  .text            ro code  0x000009f2    0x4  exit.o [3]
+  .text            ro code  0x000009f8    0xa  cexit.o [6]
+  .text            ro code  0x00000a04   0x14  exit.o [7]
+  .rodata          const    0x00000a18    0x0  zero_init3.o [6]
+                          - 0x00000a18  0x818
+
+"P2", part 1 of 2:                        0x4
+  .bss             zero     0x20000000    0x4  uart_echo.o [1]
+                          - 0x20000004    0x4
+
+"P2", part 2 of 2:                      0x100
+  .noinit          uninit   0x20000004  0x100  startup_ewarm.o [1]
+                          - 0x20000104  0x100
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x4:
+          0x20000000   0x4
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+C:\ti\tm4c129\examples\boards\ek-tm4c1294xl\uart_echo\ewarm\Obj: [1]
+    startup_ewarm.o        26      512      256
+    uart_echo.o           372                 4
+    -------------------------------------------
+    Total:                398      512      260
+
+command line: [2]
+    -------------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    exit.o                  4
+    low_level_init.o        4
+    -------------------------------------------
+    Total:                  8
+
+driverlib.a: [4]
+    cpu.o                   8
+    gpio.o                212
+    interrupt.o            16
+    sysctl.o            1 188
+    uart.o                 10
+    -------------------------------------------
+    Total:              1 434
+
+m7M_tls.a: [5]
+    fpinit_M.o             34
+    -------------------------------------------
+    Total:                 34
+
+rt7M_tl.a: [6]
+    cexit.o                10
+    cmain.o                26
+    cstartup_M.o           12
+    data_init.o            40
+    zero_init3.o           64
+    -------------------------------------------
+    Total:                152
+
+shb_l.a: [7]
+    exit.o                 20
+    -------------------------------------------
+    Total:                 20
+
+    Gaps                    8        2
+    Linker created                  16
+-----------------------------------------------
+    Grand Total:        2 054      530      260
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.iar.init_table$$Base   0x0000099c          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x000009ac          --   Gb  - Linker created -
+?main                   0x000009d5         Code  Gb  cmain.o [6]
+CPUcpsie                0x00000909    0x8  Code  Gb  cpu.o [4]
+FaultISR                0x000009c3    0x2  Code  Lc  startup_ewarm.o [1]
+GPIOPinConfigure        0x0000081f   0x38  Code  Gb  gpio.o [4]
+GPIOPinWrite            0x00000819    0x6  Code  Gb  gpio.o [4]
+IntDefaultHandler       0x000009c5    0x2  Code  Lc  startup_ewarm.o [1]
+IntMasterEnable         0x000008ed    0x8  Code  Gb  interrupt.o [4]
+NmiSR                   0x000009c1    0x2  Code  Lc  startup_ewarm.o [1]
+Region$$Table$$Base     0x0000099c          --   Gb  - Linker created -
+Region$$Table$$Limit    0x000009ac          --   Gb  - Linker created -
+ResetISR                0x000009ad    0xe  Code  Gb  startup_ewarm.o [1]
+SysCtlClockFreqSet      0x00000229  0x204  Code  Gb  sysctl.o [4]
+SysCtlDelay             0x00000221    0x8  Code  Gb  sysctl.o [4]
+UARTCharPut             0x000008fd    0xa  Code  Gb  uart.o [4]
+UARTIntHandler          0x000006a5   0x62  Code  Gb  uart_echo.o [1]
+_SysCtlMemTimingGet     0x00000201   0x20  Code  Lc  sysctl.o [4]
+__cmain                 0x000009d5         Code  Gb  cmain.o [6]
+__exit                  0x00000a05   0x14  Code  Gb  exit.o [7]
+__iar_data_init3        0x00000951   0x28  Code  Gb  data_init.o [6]
+__iar_init_vfp          0x00000979         Code  Gb  fpinit_M.o [5]
+__iar_program_start     0x000009c7         Code  Gb  cstartup_M.o [6]
+__iar_zero_init3        0x00000911   0x40  Code  Gb  zero_init3.o [6]
+__low_level_init        0x000009ef    0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x00000000  0x200  Data  Gb  startup_ewarm.o [1]
+_call_main              0x000009e1         Code  Gb  cmain.o [6]
+_exit                   0x000009f9         Code  Gb  cexit.o [6]
+_main                   0x000009eb         Code  Gb  cmain.o [6]
+exit                    0x000009f3    0x4  Code  Gb  exit.o [3]
+g_pppui32XTALtoVCO      0x000004bc  0x1b0  Data  Lc  sysctl.o [4]
+g_pui32GPIOBaseAddrs    0x0000085c   0x90  Data  Lc  gpio.o [4]
+g_pui32VCOFrequencies   0x0000069c    0x8  Data  Lc  sysctl.o [4]
+g_pui32Xtals            0x00000450   0x6c  Data  Lc  sysctl.o [4]
+g_sXTALtoMEMTIM         0x0000066c   0x30  Data  Lc  sysctl.o [4]
+g_ui32SysClock          0x20000000    0x4  Data  Gb  uart_echo.o [1]
+main                    0x00000707   0xcc  Code  Gb  uart_echo.o [1]
+pui32Stack              0x20000004  0x100  Data  Lc  startup_ewarm.o [1]
+
+
+[1] = C:\ti\tm4c129\examples\boards\ek-tm4c1294xl\uart_echo\ewarm\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = driverlib.a
+[5] = m7M_tls.a
+[6] = rt7M_tl.a
+[7] = shb_l.a
+
+  2 054 bytes of readonly  code memory
+    530 bytes of readonly  data memory
+    260 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

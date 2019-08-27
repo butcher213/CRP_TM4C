@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+    
+    
+  <CurrentConfigs><Project>enet_io/Debug</Project><Project>boot_emac_flash/Debug</Project><Project>enet_lwip/Debug</Project><Project>enet_uip/Debug</Project><Project>enet_weather/Debug</Project><Project>driverlib/Debug</Project><Project>usblib/Debug</Project><Project>usb_host_keyboard/Debug</Project><Project>boot_demo_emac_flash/Debug</Project><Project>blinky/Debug</Project><Project>bitband/Debug</Project><Project>boot_demo1/Debug</Project><Project>boot_demo2/Debug</Project><Project>boot_serial/Debug</Project><Project>udma_demo/Debug</Project><Project>uart_echo/Debug</Project><Project>usb_dev_bulk/Debug</Project><Project>usb_dev_cserial/Debug</Project><Project>usb_dev_keyboard/Debug</Project><Project>gpio_jtag/Debug</Project><Project>hello/Debug</Project><Project>hibernate/Debug</Project><Project>timers/Debug</Project><Project>mpu_fault/Debug</Project><Project>interrupts/Debug</Project><Project>qs_iot/Debug</Project><Project>project0/Debug</Project><Project>sleep_modes/Debug</Project><Project>usb_host_mouse/Debug</Project><Project>usb_host_msc/Debug</Project><Project>usb_stick_update/Debug</Project><Project>usb_stick_demo/Debug</Project><Project>watchdog/Debug</Project></CurrentConfigs><CurrentProj>blinky</CurrentProj><OverviewSelected>0</OverviewSelected></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Debug-Log>
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1477</ColumnWidth1></Debug-Log>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>261</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1107</ColumnWidth1><ColumnWidth2>295</ColumnWidth2><ColumnWidth3>73</ColumnWidth3></Build>
+      <TerminalIO/>
+    </Static>
+    <Windows>
+      
+      
+    <Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-30207-22289</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>&lt;ws&gt;</ExpandedNode><ExpandedNode>&lt;ws&gt;/blinky</ExpandedNode><ExpandedNode>blinky</ExpandedNode><ExpandedNode>blinky/Source</ExpandedNode><ExpandedNode>uart_echo</ExpandedNode><ExpandedNode>uart_echo/Source</ExpandedNode><ExpandedNode>udma_demo</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-18936-22296</Identity>
+            <TabName>Debug Log</TabName>
+            <Factory>Debug-Log</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-19942-1176</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\blinky\blinky.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>287</YPos2><SelStart2>12854</SelStart2><SelEnd2>12854</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\uart_echo\uart_echo.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>189</YPos2><SelStart2>6970</SelStart2><SelEnd2>6970</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\uart_echo\startup_ewarm.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>39</YPos2><SelStart2>2049</SelStart2><SelEnd2>2049</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\blinky\crp.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>9</YPos2><SelStart2>762</SelStart2><SelEnd2>762</SelEnd2></Tab><ActiveTab>3</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\blinky\startup_ewarm.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>40</YPos2><SelStart2>2171</SelStart2><SelEnd2>2171</SelEnd2></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-05B25B08><key>iaridepm.enu1</key></Toolbar-05B25B08></Sizes></Row0></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>497</Bottom><Right>335</Right><x>-2</x><y>-2</y><xscreen>109</xscreen><yscreen>95</yscreen><sizeHorzCX>70964</sizeHorzCX><sizeHorzCY>121639</sizeHorzCY><sizeVertCX>219401</sizeVertCX><sizeVertCY>638924</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>239</Bottom><Right>1538</Right><x>-2</x><y>-2</y><xscreen>1540</xscreen><yscreen>241</yscreen><sizeHorzCX>1002604</sizeHorzCX><sizeHorzCY>308579</sizeHorzCY><sizeVertCX>70964</sizeVertCX><sizeVertCY>121639</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+
